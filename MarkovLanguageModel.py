@@ -190,12 +190,12 @@ while True:
             s1 = input("Enter a sentence: ")
             if s1 == "@EXIT":
                 break
-            elif s1 == "":
+            elif s1 == "" or s1.strip(" ") == "": #We do not allow empty inputs or inputs only consisting of spaces
                 continue
             s2 = input("Enter another sentence: ")
             if s2 == "@EXIT":
                 break
-            elif s2 == "":
+            elif s2 == "" or s2.strip(" ") == "":
                 continue
 
             tokens_1 = []
@@ -288,4 +288,5 @@ while True:
 
 
     elif mode == "@EXIT":
+
         break
